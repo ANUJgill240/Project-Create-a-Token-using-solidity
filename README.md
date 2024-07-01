@@ -1,18 +1,24 @@
-# Project Title
-ETH PROOF: Beginner EVM Course final project
-
+# ETH PROOF: Beginner EVM Course final project
+This contract manages a custom token. It keeps track of balances for each user and the total supply. It allows creating new tokens (minting) for an address and destroying existing tokens (burning) from the sender's account.
 ## Description
-First, I built a contract called MyToken for the first task. I defined and assigned values to three public variables in this contract: tokenName, tokenAbbreviations, and totalSupply. The token's name is recorded in the tokenName field, its abbreviation is contained in the tokenAbbreviations field, and the totalSupply field tracks the total balance. I then constructed a mapping named balance that maps an unsigned integer to each address. Next, I created a mint function that takes two parameters: an unsigned integer called "value" and an address called "adr." The input address's balance and total supply are increased by the given amount using this function. Finally, using the same parameters as the mint function, I created a burn function.This burn function determines whether the amount to be subtracted is less than the address's balance. The designated amount is subtracted from the address's balance as well as the total supply if the condition is met.
+The MyToken contract implements basic functionalities to handle a custom token on the Ethereum blockchain. It includes:
 
+1. Stores token details (name, symbol, total supply) publicly.
+
+2. Tracks balances per address using a mapping.
+
+3. Mints new tokens for an address with mint.
+
+4. Burns tokens from an address (with balance check) with burn.
+
+This contract serves as a simple introduction to creating and managing custom tokens using Solidity.
 
 ## Getting Started
 
-- Go to https://remix.ethereum.org/
-- Create a new file with file extension as .sol 
-- Compile the program.
-- File name can be xyz.sol
+- Run on Remix IDE: Use Remix for online execution.
+- Create a new Solidity file: Click "+" in the left sidebar, save as .sol (e.g., MyToken.sol).
+- Paste the code: Copy and paste your Solidity code into the file.
 
-## code
 ---
     pragma solidity ^0.8.18;  
  
@@ -33,5 +39,23 @@ First, I built a contract called MyToken for the first task. I defined and assig
             }
             } }
 
+- Gettin' it ready to run: Head over to the "Solidity Compiler" tab on the left. Make sure the "Compiler" version is set to something that works with your code (like 0.8.25). Then, hit that "Compile MyToken.sol" button!
+
+- Deployment time!: Now switch to the "Deploy & Run Transactions" tab. Find MyToken in the dropdown menu and click "Deploy" to unleash your contract to the world (well, a virtual world at least).
+
+- Let's play!: Remix provides a cool interface to interact with your contract. Use it to call those mint and burn functions. Just fill in the info they need and hit the buttons to make it happen!
+## Help
+If you encounter any issues, ensure the following:
+
+- The Solidity compiler version is set correctly.
+- The address used in function calls is valid.
+- The balance of the address is sufficient for burning tokens.
+For additional help, use the Remix documentation or community forums.
+
 ## Author
 Anuj
+
+anujgill240@gmail.com
+
+## License
+This project is licensed under the MIT License.
